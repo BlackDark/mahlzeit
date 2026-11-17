@@ -53,8 +53,8 @@ jobs:
           changed=$(git diff --name-only HEAD^1 HEAD)
           has() { grep -qE "$1" <<< "$changed" && echo true || echo false; }
           # app: Go and SPA are checked and exercised together (generated client, e2e)
-          app=$(has '^(cmd/|internal/|web/|go\.(mod|sum)$|mise\.toml$)')
-          docker=$(has '^(docker/|cmd/|internal/|web/|go\.(mod|sum)$)')
+          app=$(has '^(cmd/|internal/|web/|go\.(mod|sum)$|mise\.toml$|\.github/workflows/ci\.yml$)')
+          docker=$(has '^(docker/|cmd/|internal/|web/|go\.(mod|sum)$|\.github/workflows/ci\.yml$)')
           lint=$(has '^(\.github/|renovate\.json5?$)')
           {
             echo "lint=$lint"
