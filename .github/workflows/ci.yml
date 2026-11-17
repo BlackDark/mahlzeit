@@ -21,8 +21,6 @@ concurrency:
 # push/workflow_call/workflow_dispatch run everything. Draft PRs skip `changes`, so every area
 # job (needs: changes) is skipped too, and `check` (if: always()) still passes.
 env:
-  # renovate: datasource=github-releases depName=rhysd/actionlint
-  ACTIONLINT_VERSION: "1.7.12"
   # renovate: datasource=npm depName=renovate
   RENOVATE_VERSION: "44.221.1"
 
@@ -50,12 +48,21 @@ jobs:
             } >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          changed=$(git diff --name-only HEAD^1 HEAD)
-          has() { grep -qE "$1" <<< "$changed" && echo true || echo false; }
+          git diff --no-renames --name-only -z HEAD^1 HEAD > "$RUNNER_TEMP/changed-paths"
           # app: Go and SPA are checked and exercised together (generated client, e2e)
-          app=$(has '^(cmd/|internal/|web/|go\.(mod|sum)$|mise\.toml$)')
-          docker=$(has '^(docker/|cmd/|internal/|web/|go\.(mod|sum)$)')
-          lint=$(has '^(\.github/|renovate\.json5?$)')
+          app=false docker=false lint=false
+          while IFS= read -r -d '' path; do
+            case "$path" in
+              cmd/*|internal/*|web/*|go.mod|go.sum|.github/workflows/ci.yml) app=true docker=true ;;
+              docker/*) docker=true ;;
+            esac
+            case "$path" in
+              mise.toml|.mise.toml|mise.lock|.config/mise*|mise/*|.mise/*) app=true ;;
+            esac
+            case "$path" in
+              .github/*|renovate.json|renovate.json5) lint=true ;;
+            esac
+          done < "$RUNNER_TEMP/changed-paths"
           {
             echo "lint=$lint"
             echo "app=$app"
@@ -72,6 +79,8 @@ jobs:
         with:
           persist-credentials: false
       - uses: jdx/mise-action@b44d12e7d0d8ee7461bb893e1b1993500433185b # v5.2.7
+        with:
+          cache_save: ${{ github.workflow == 'CI' && github.ref == 'refs/heads/main' && github.event_name == 'push' }}
       - run: pnpm --dir web install --frozen-lockfile
       - run: mise run check
       - name: Generated API client is up to date
@@ -90,6 +99,8 @@ jobs:
         with:
           persist-credentials: false
       - uses: jdx/mise-action@b44d12e7d0d8ee7461bb893e1b1993500433185b # v5.2.7
+        with:
+          cache_save: ${{ github.workflow == 'CI' && github.ref == 'refs/heads/main' && github.event_name == 'push' }}
       - run: pnpm --dir web install --frozen-lockfile
       - run: pnpm --dir web build
       - run: CGO_ENABLED=0 go build -o bin/mahlzeit ./cmd/mahlzeit
@@ -122,7 +133,7 @@ jobs:
           file: docker/Dockerfile
           platforms: linux/amd64,linux/arm64
           cache-from: type=gha
-          cache-to: type=gha,mode=max
+          cache-to: ${{ github.workflow == 'CI' && github.ref == 'refs/heads/main' && github.event_name == 'push' && 'type=gha,mode=max' || '' }}
       - name: Load amd64 image
         uses: docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc # v7.4.0
         with:
@@ -156,10 +167,11 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - name: actionlint
-        run: |
-          bash <(curl -fsSL "https://raw.githubusercontent.com/rhysd/actionlint/v${ACTIONLINT_VERSION}/scripts/download-actionlint.bash") "$ACTIONLINT_VERSION"
-          ./actionlint -color .github/workflows/*.yml
+      - uses: jdx/mise-action@236a21c3b91f5db6d4e174b348674a0f0caac06d # v5.2.9
+        with:
+          install_args: actionlint
+          cache_save: false
+      - run: actionlint -color
 
   renovate-config:
     needs: changes
