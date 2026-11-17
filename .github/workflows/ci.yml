@@ -48,12 +48,21 @@ jobs:
             } >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          changed=$(git diff --no-renames --name-only -z HEAD^1 HEAD | xargs -0 -n1 printf '%s\n')
-          has() { grep -qE "$1" <<< "$changed" && echo true || echo false; }
+          git diff --no-renames --name-only -z HEAD^1 HEAD > "$RUNNER_TEMP/changed-paths"
           # app: Go and SPA are checked and exercised together (generated client, e2e)
-          app=$(has '^(cmd/|internal/|web/|go\.(mod|sum)$|mise\.toml$|\.github/workflows/ci\.yml$)')
-          docker=$(has '^(docker/|cmd/|internal/|web/|go\.(mod|sum)$|\.github/workflows/ci\.yml$)')
-          lint=$(has '^(\.github/|renovate\.json5?$)')
+          app=false docker=false lint=false
+          while IFS= read -r -d '' path; do
+            case "$path" in
+              cmd/*|internal/*|web/*|go.mod|go.sum|.github/workflows/ci.yml) app=true docker=true ;;
+              docker/*) docker=true ;;
+            esac
+            case "$path" in
+              mise.toml|.mise.toml|mise.lock|.config/mise*|mise/*|.mise/*) app=true ;;
+            esac
+            case "$path" in
+              .github/*|renovate.json|renovate.json5) lint=true ;;
+            esac
+          done < "$RUNNER_TEMP/changed-paths"
           {
             echo "lint=$lint"
             echo "app=$app"
