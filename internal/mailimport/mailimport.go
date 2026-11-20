@@ -21,7 +21,7 @@ import (
 	_ "github.com/emersion/go-message/charset" // decode non-UTF-8 headers
 	"github.com/emersion/go-message/mail"
 
-	"github.com/blackdark/vc-beleg-2/internal/app"
+	"github.com/blackdark/mahlzeit/internal/app"
 )
 
 // Config configures the mailbox.

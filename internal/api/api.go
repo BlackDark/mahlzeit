@@ -13,7 +13,7 @@ import (
 	"github.com/danielgtaylor/huma/v2"
 	"github.com/danielgtaylor/huma/v2/adapters/humago"
 
-	"github.com/blackdark/vc-beleg-2/internal/app"
+	"github.com/blackdark/mahlzeit/internal/app"
 )
 
 // SessionCookie is the name of the session cookie.

@@ -8,8 +8,8 @@ import (
 	"slices"
 	"time"
 
-	"github.com/blackdark/vc-beleg-2/internal/money"
-	"github.com/blackdark/vc-beleg-2/internal/rates"
+	"github.com/blackdark/mahlzeit/internal/money"
+	"github.com/blackdark/mahlzeit/internal/rates"
 )
 
 // TaxModel says how the taxable part of an allowance is taxed.

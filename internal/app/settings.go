@@ -5,8 +5,8 @@ import (
 	"database/sql"
 	"strings"
 
-	"github.com/blackdark/vc-beleg-2/internal/calc"
-	"github.com/blackdark/vc-beleg-2/internal/holidays"
+	"github.com/blackdark/mahlzeit/internal/calc"
+	"github.com/blackdark/mahlzeit/internal/holidays"
 )
 
 // Settings are the company and employee data of the account.

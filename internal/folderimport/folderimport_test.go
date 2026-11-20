@@ -14,7 +14,7 @@ import (
 
 	xwebdav "golang.org/x/net/webdav"
 
-	"github.com/blackdark/vc-beleg-2/internal/app"
+	"github.com/blackdark/mahlzeit/internal/app"
 )
 
 // fakeApp records imports; files whose content starts with "bad" are

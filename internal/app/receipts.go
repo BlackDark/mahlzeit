@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/blackdark/vc-beleg-2/internal/money"
+	"github.com/blackdark/mahlzeit/internal/money"
 )
 
 // Extraction is what the reader found on a receipt. Uncertain lists the

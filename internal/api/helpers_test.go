@@ -14,9 +14,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/blackdark/vc-beleg-2/internal/app"
-	"github.com/blackdark/vc-beleg-2/internal/db"
-	"github.com/blackdark/vc-beleg-2/internal/export"
+	"github.com/blackdark/mahlzeit/internal/app"
+	"github.com/blackdark/mahlzeit/internal/db"
+	"github.com/blackdark/mahlzeit/internal/export"
 )
 
 type testServer struct {

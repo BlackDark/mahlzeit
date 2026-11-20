@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/blackdark/vc-beleg-2/internal/app"
+	"github.com/blackdark/mahlzeit/internal/app"
 )
 
 type testReader struct{ calls chan chan error }

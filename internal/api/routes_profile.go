@@ -6,8 +6,8 @@ import (
 
 	"github.com/danielgtaylor/huma/v2"
 
-	"github.com/blackdark/vc-beleg-2/internal/app"
-	"github.com/blackdark/vc-beleg-2/internal/rates"
+	"github.com/blackdark/mahlzeit/internal/app"
+	"github.com/blackdark/mahlzeit/internal/rates"
 )
 
 type passwordBody struct {

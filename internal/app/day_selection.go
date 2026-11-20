@@ -4,7 +4,7 @@ import (
 	"context"
 	"database/sql"
 
-	"github.com/blackdark/vc-beleg-2/internal/calc"
+	"github.com/blackdark/mahlzeit/internal/calc"
 )
 
 // SetSelectedReceipt chooses the checked receipt for a meal day; 0 restores automatic selection.

@@ -16,7 +16,7 @@ import (
 
 	"github.com/go-jose/go-jose/v4"
 
-	"github.com/blackdark/vc-beleg-2/internal/app"
+	"github.com/blackdark/mahlzeit/internal/app"
 )
 
 // identity is what the mock provider puts into the next ID token.

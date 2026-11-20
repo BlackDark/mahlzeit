@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/blackdark/vc-beleg-2/internal/db"
-	"github.com/blackdark/vc-beleg-2/internal/money"
+	"github.com/blackdark/mahlzeit/internal/db"
+	"github.com/blackdark/mahlzeit/internal/money"
 	"github.com/pressly/goose/v3"
 )
 

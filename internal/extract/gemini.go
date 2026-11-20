@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/blackdark/vc-beleg-2/internal/app"
+	"github.com/blackdark/mahlzeit/internal/app"
 )
 
 // GeminiModel is Google's alias for its current Flash model; it is used

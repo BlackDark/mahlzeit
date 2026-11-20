@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/blackdark/vc-beleg-2/internal/app"
+	"github.com/blackdark/mahlzeit/internal/app"
 )
 
 // Config configures the watched folder.

@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/blackdark/vc-beleg-2/internal/app"
+	"github.com/blackdark/mahlzeit/internal/app"
 )
 
 // OpenAIBaseURL is used unless MAHLZEIT_EXTRACT_BASE_URL names another

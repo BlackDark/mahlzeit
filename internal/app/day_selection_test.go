@@ -6,7 +6,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/blackdark/vc-beleg-2/internal/money"
+	"github.com/blackdark/mahlzeit/internal/money"
 )
 
 func TestManualReceiptSelectionAndModes(t *testing.T) {
