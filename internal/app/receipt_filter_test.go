@@ -6,7 +6,7 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/blackdark/vc-beleg-2/internal/money"
+	"github.com/blackdark/mahlzeit/internal/money"
 )
 
 func TestListReceiptsFilters(t *testing.T) {

@@ -8,8 +8,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/blackdark/vc-beleg-2/internal/app"
-	"github.com/blackdark/vc-beleg-2/internal/folderimport"
+	"github.com/blackdark/mahlzeit/internal/app"
+	"github.com/blackdark/mahlzeit/internal/folderimport"
 )
 
 // check runs diagnostics against the live configuration without changing

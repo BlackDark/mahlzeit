@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/blackdark/vc-beleg-2/internal/money"
+	"github.com/blackdark/mahlzeit/internal/money"
 )
 
 //go:embed benefit-values.csv

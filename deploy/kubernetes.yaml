@@ -43,7 +43,7 @@ spec:
         seccompProfile: { type: RuntimeDefault }
       containers:
         - name: mahlzeit
-          image: ghcr.io/blackdark/vc-beleg-2:0.1 # pin a version; Renovate can bump it
+          image: ghcr.io/blackdark/mahlzeit:0.1 # pin a version; Renovate can bump it
           ports:
             - { name: http, containerPort: 8080 }
           env:

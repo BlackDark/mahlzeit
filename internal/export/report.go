@@ -12,8 +12,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/blackdark/vc-beleg-2/internal/calc"
-	"github.com/blackdark/vc-beleg-2/internal/money"
+	"github.com/blackdark/mahlzeit/internal/calc"
+	"github.com/blackdark/mahlzeit/internal/money"
 )
 
 //go:embed templates/*.typ

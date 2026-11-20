@@ -55,7 +55,7 @@ Same PR, only what the change touches:
 
 ### Issue tracker
 
-Issues live in GitHub Issues (`BlackDark/vc-beleg-2`), via the `gh` CLI. See [docs/agents/issue-tracker.md](docs/agents/issue-tracker.md).
+Issues live in GitHub Issues (`BlackDark/mahlzeit`), via the `gh` CLI. See [docs/agents/issue-tracker.md](docs/agents/issue-tracker.md).
 
 ### Triage labels
 

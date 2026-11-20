@@ -3,9 +3,9 @@ package main
 import (
 	"context"
 
-	"github.com/blackdark/vc-beleg-2/internal/app"
-	"github.com/blackdark/vc-beleg-2/internal/folderimport"
-	"github.com/blackdark/vc-beleg-2/internal/mailimport"
+	"github.com/blackdark/mahlzeit/internal/app"
+	"github.com/blackdark/mahlzeit/internal/folderimport"
+	"github.com/blackdark/mahlzeit/internal/mailimport"
 )
 
 func configureConnections(cfg *Config, a *app.App, reader app.Extractor) error {

@@ -4,8 +4,8 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/blackdark/vc-beleg-2/internal/app"
-	"github.com/blackdark/vc-beleg-2/internal/extract"
+	"github.com/blackdark/mahlzeit/internal/app"
+	"github.com/blackdark/mahlzeit/internal/extract"
 )
 
 func (x ExtractConfig) Info() app.ReaderInfo {

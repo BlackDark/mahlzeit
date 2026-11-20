@@ -8,10 +8,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/blackdark/vc-beleg-2/internal/calc"
-	"github.com/blackdark/vc-beleg-2/internal/export"
-	"github.com/blackdark/vc-beleg-2/internal/holidays"
-	"github.com/blackdark/vc-beleg-2/internal/money"
+	"github.com/blackdark/mahlzeit/internal/calc"
+	"github.com/blackdark/mahlzeit/internal/export"
+	"github.com/blackdark/mahlzeit/internal/holidays"
+	"github.com/blackdark/mahlzeit/internal/money"
 )
 
 // ReportRef is one generated report version.

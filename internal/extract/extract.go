@@ -15,8 +15,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/blackdark/vc-beleg-2/internal/app"
-	"github.com/blackdark/vc-beleg-2/internal/money"
+	"github.com/blackdark/mahlzeit/internal/app"
+	"github.com/blackdark/mahlzeit/internal/money"
 )
 
 const prompt = `This is a German shop or restaurant receipt (Kassenbon) photographed or scanned by its owner.

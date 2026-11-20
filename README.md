@@ -5,7 +5,7 @@
 **Self-hosted app for German meal allowances (Essenszuschuss) paid to yourself as managing shareholder.**<br>
 Snap or mail your lunch receipts, let it pick the days that count, and archive a clean monthly PDF.
 
-[![CI](https://github.com/BlackDark/vc-beleg-2/actions/workflows/ci.yml/badge.svg)](https://github.com/BlackDark/vc-beleg-2/actions/workflows/ci.yml)
+[![CI](https://github.com/BlackDark/mahlzeit/actions/workflows/ci.yml/badge.svg)](https://github.com/BlackDark/mahlzeit/actions/workflows/ci.yml)
 [![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue)](LICENSE)
 
 </div>
@@ -30,7 +30,7 @@ The rules are simple until they aren't: one allowance per working day, at most â
 One container with one volume, images for amd64 and arm64 on GHCR:
 
 ```text
-ghcr.io/blackdark/vc-beleg-2:<version>
+ghcr.io/blackdark/mahlzeit:<version>
 ```
 
 Kubernetes example: [deploy/kubernetes.yaml](deploy/kubernetes.yaml). Configuration, Pocket ID, mail and folder import, backup: [docs/OPERATIONS.md](docs/OPERATIONS.md).

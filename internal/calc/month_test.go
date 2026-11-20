@@ -5,9 +5,9 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/blackdark/vc-beleg-2/internal/holidays"
-	"github.com/blackdark/vc-beleg-2/internal/money"
-	"github.com/blackdark/vc-beleg-2/internal/rates"
+	"github.com/blackdark/mahlzeit/internal/holidays"
+	"github.com/blackdark/mahlzeit/internal/money"
+	"github.com/blackdark/mahlzeit/internal/rates"
 )
 
 var v2026 = &rates.Values{Year: 2026, Breakfast: 237, Lunch: 457, Dinner: 457, TopUp: 310}

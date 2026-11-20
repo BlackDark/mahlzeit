@@ -1,4 +1,4 @@
-module github.com/blackdark/vc-beleg-2
+module github.com/blackdark/mahlzeit
 
 go 1.27.3
 

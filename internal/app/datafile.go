@@ -12,7 +12,7 @@ import (
 
 	"golang.org/x/text/unicode/norm"
 
-	"github.com/blackdark/vc-beleg-2/internal/money"
+	"github.com/blackdark/mahlzeit/internal/money"
 )
 
 // Limits of a data file (JSON upload that creates receipts without a scan).

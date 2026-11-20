@@ -11,7 +11,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/blackdark/vc-beleg-2/internal/app"
+	"github.com/blackdark/mahlzeit/internal/app"
 )
 
 // Finding is what an import run would do with one entry of the folder.

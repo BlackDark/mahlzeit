@@ -11,8 +11,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/blackdark/vc-beleg-2/internal/export"
-	"github.com/blackdark/vc-beleg-2/internal/rates"
+	"github.com/blackdark/mahlzeit/internal/export"
+	"github.com/blackdark/mahlzeit/internal/rates"
 )
 
 // Error is a domain error with a stable code the UI translates.

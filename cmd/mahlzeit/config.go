@@ -12,10 +12,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/blackdark/vc-beleg-2/internal/api"
-	"github.com/blackdark/vc-beleg-2/internal/app"
-	"github.com/blackdark/vc-beleg-2/internal/folderimport"
-	"github.com/blackdark/vc-beleg-2/internal/mailimport"
+	"github.com/blackdark/mahlzeit/internal/api"
+	"github.com/blackdark/mahlzeit/internal/app"
+	"github.com/blackdark/mahlzeit/internal/folderimport"
+	"github.com/blackdark/mahlzeit/internal/mailimport"
 )
 
 // Config is read from MAHLZEIT_* environment variables. Secrets can also be

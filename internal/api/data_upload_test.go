@@ -3,7 +3,7 @@ package api
 import (
 	"testing"
 
-	"github.com/blackdark/vc-beleg-2/internal/app"
+	"github.com/blackdark/mahlzeit/internal/app"
 )
 
 func TestUploadReceiptData(t *testing.T) {

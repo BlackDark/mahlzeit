@@ -21,14 +21,14 @@ import (
 
 	"github.com/anthropics/anthropic-sdk-go/v2/option"
 
-	"github.com/blackdark/vc-beleg-2/internal/api"
-	"github.com/blackdark/vc-beleg-2/internal/app"
-	"github.com/blackdark/vc-beleg-2/internal/db"
-	"github.com/blackdark/vc-beleg-2/internal/export"
-	"github.com/blackdark/vc-beleg-2/internal/extract"
-	"github.com/blackdark/vc-beleg-2/internal/folderimport"
-	"github.com/blackdark/vc-beleg-2/internal/mailimport"
-	"github.com/blackdark/vc-beleg-2/web"
+	"github.com/blackdark/mahlzeit/internal/api"
+	"github.com/blackdark/mahlzeit/internal/app"
+	"github.com/blackdark/mahlzeit/internal/db"
+	"github.com/blackdark/mahlzeit/internal/export"
+	"github.com/blackdark/mahlzeit/internal/extract"
+	"github.com/blackdark/mahlzeit/internal/folderimport"
+	"github.com/blackdark/mahlzeit/internal/mailimport"
+	"github.com/blackdark/mahlzeit/web"
 	_ "time/tzdata" // report time stamps in Europe/Berlin on a minimal image
 )
 

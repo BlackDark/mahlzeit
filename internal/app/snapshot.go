@@ -5,7 +5,7 @@ import (
 	"database/sql"
 	"time"
 
-	"github.com/blackdark/vc-beleg-2/internal/export"
+	"github.com/blackdark/mahlzeit/internal/export"
 )
 
 // snapshot freezes the month for its report and loads the originals of the

@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/blackdark/vc-beleg-2/internal/export"
+	"github.com/blackdark/mahlzeit/internal/export"
 )
 
 // ImportData creates one pending receipt per entry of a JSON data file

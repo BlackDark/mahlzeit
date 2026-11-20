@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/blackdark/vc-beleg-2/internal/folderimport"
+	"github.com/blackdark/mahlzeit/internal/folderimport"
 )
 
 func TestExtractConfig(t *testing.T) {
