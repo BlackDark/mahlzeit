@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.2](https://github.com/BlackDark/mahlzeit/compare/v0.7.1...v0.7.2) (2026-11-23)
+
+
+### Bug Fixes
+
+* **deps:** update go modules (non-major) ([#74](https://github.com/BlackDark/mahlzeit/issues/74)) ([72f2506](https://github.com/BlackDark/mahlzeit/commit/72f2506adf0e8e0ec51936e486999ac183986bef))
+
 ## [0.7.1](https://github.com/BlackDark/mahlzeit/compare/v0.7.0...v0.7.1) (2026-11-20)
 
 
